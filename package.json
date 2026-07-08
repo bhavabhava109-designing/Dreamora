@@ -1,0 +1,14 @@
+{
+  "name": "virtual-study-room-platform",
+  "version": "1.0.0",
+  "description": "Collaborative Virtual Study Room Platform with Pomodoro, Ambient Sounds, Tasks, and Real-time Rooms",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n \"server,client\" -c \"magenta,cyan\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

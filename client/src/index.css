@@ -1,0 +1,652 @@
+:root {
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --glass-blur: 24px;
+}
+
+/* 1. Midnight Slate Theme (Dark / Black & Pistachio Green - Fuji & Cafe Match) */
+.theme-nebula, :root {
+  --bg-dark: #030805; /* Deep slate-green-black background base */
+  --bg-dark-end: #09140C; /* Dark forest green gradient end */
+  --bg-card: rgba(8, 16, 12, 0.45); /* High-translucency green-glass card */
+  --bg-card-hover: rgba(14, 28, 20, 0.60);
+  --primary: #76FF3B; /* Electric Neon Pistachio Green primary highlight */
+  --primary-hover: #5EE525;
+  --primary-glow: rgba(118, 255, 59, 0.28);
+  --secondary: #57C633; /* Sage/pistachio secondary */
+  --secondary-glow: rgba(87, 198, 51, 0.18);
+  --accent: #558B2F;
+  --success: #76FF3B;
+  --border: rgba(118, 255, 59, 0.18);
+  --border-hover: rgba(118, 255, 59, 0.35);
+  --text: #F0FFF2; /* Soft minty white text for perfect visual comfort */
+  --text-muted: #8DBF88; /* Sage green subtext */
+  --glow-color-1: rgba(118, 255, 59, 0.06);
+  --glow-color-2: rgba(87, 198, 51, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35), inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* 2. Cozy Lavender & Lilac Theme (Light / Cute & Elite Purple - Sakura/Lavender Match) */
+.theme-solar {
+  --bg-dark: #FFFFFF; /* Pure White background base */
+  --bg-dark-end: #E4D5FF; /* Soft Lavender gradient end */
+  --bg-card: rgba(255, 255, 255, 0.40); /* High-translucency white-lavender glass card */
+  --bg-card-hover: rgba(255, 255, 255, 0.55);
+  --primary: #8F00FF; /* Ultra-Bright Electric Purple primary highlight */
+  --primary-hover: #7300D4;
+  --primary-glow: rgba(143, 0, 255, 0.25);
+  --secondary: #B800FF; /* Rich saturated violet secondary */
+  --secondary-glow: rgba(184, 0, 255, 0.18);
+  --accent: #C084FC;
+  --success: #10B981;
+  --border: rgba(143, 0, 255, 0.28); /* Stronger wisteria borders */
+  --border-hover: rgba(143, 0, 255, 0.45);
+  --text: #2B0A66; /* Deep royal purple headings/body for saturated, high-contrast text */
+  --text-muted: #5631A4; /* Vivid wisteria purple subtext/descriptions */
+  --glow-color-1: rgba(143, 0, 255, 0.08);
+  --glow-color-2: rgba(184, 0, 255, 0.06);
+  --glass-shadow: 0 8px 32px 0 rgba(143, 0, 255, 0.10), 0 4px 12px 0 rgba(0, 0, 0, 0.03), inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 3. Matcha Galaxy Theme (Green Aurora) */
+.theme-abyssal {
+  --bg-dark: #022C22;
+  --bg-dark-end: #064E3B;
+  --bg-card: rgba(6, 78, 59, 0.45);
+  --bg-card-hover: rgba(6, 78, 59, 0.65);
+  --primary: #10B981;
+  --primary-hover: #059669;
+  --primary-glow: rgba(16, 185, 129, 0.25);
+  --secondary: #34D399;
+  --secondary-glow: rgba(52, 211, 153, 0.18);
+  --accent: #6EE7B7;
+  --success: #34D399;
+  --border: rgba(16, 185, 129, 0.18);
+  --border-hover: rgba(52, 211, 153, 0.32);
+  --text: #ECFDF5;
+  --text-muted: #A7F3D0;
+  --glow-color-1: rgba(16, 185, 129, 0.08);
+  --glow-color-2: rgba(52, 211, 153, 0.06);
+}
+
+/* 4. Sakura Galaxy Theme (Pink Supernova) */
+.theme-sakura {
+  --bg-dark: #2E1065;
+  --bg-dark-end: #4C1D95;
+  --bg-card: rgba(76, 29, 149, 0.45);
+  --bg-card-hover: rgba(76, 29, 149, 0.65);
+  --primary: #EC4899;
+  --primary-hover: #DB2777;
+  --primary-glow: rgba(236, 72, 153, 0.25);
+  --secondary: #F472B6;
+  --secondary-glow: rgba(244, 114, 182, 0.18);
+  --accent: #FBCFE8;
+  --success: #34D399;
+  --border: rgba(236, 72, 153, 0.18);
+  --border-hover: rgba(244, 114, 182, 0.32);
+  --text: #FDF2F8;
+  --text-muted: #FBCFE8;
+  --glow-color-1: rgba(236, 72, 153, 0.08);
+  --glow-color-2: rgba(244, 114, 182, 0.06);
+}
+
+/* 5. Cyber Galaxy Theme (Neon Eclipse) */
+.theme-cyber {
+  --bg-dark: #030712;
+  --bg-dark-end: #111827;
+  --bg-card: rgba(17, 24, 39, 0.45);
+  --bg-card-hover: rgba(17, 24, 39, 0.65);
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+  --primary-glow: rgba(59, 130, 246, 0.25);
+  --secondary: #F43F5E;
+  --secondary-glow: rgba(244, 63, 94, 0.18);
+  --accent: #10B981;
+  --success: #34D399;
+  --border: rgba(59, 130, 246, 0.18);
+  --border-hover: rgba(244, 63, 94, 0.32);
+  --text: #F9FAFB;
+  --text-muted: #D1D5DB;
+  --glow-color-1: rgba(59, 130, 246, 0.08);
+  --glow-color-2: rgba(244, 63, 94, 0.06);
+}
+
+/* Global transitions for theme elements */
+body, .glass-panel, .sidebar-panel, .glass-button, .glass-input, h1, h2, h3, h4, span, div, p, select, input, textarea {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              text-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-end) 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+p, span, label, input, textarea, button, select {
+  font-family: var(--font-body);
+  font-weight: 500; /* Aesthetic medium weight for perfect visibility on glass */
+  font-size: 14.5px; /* Boosted base text size for cleaner visibility */
+}
+
+.galaxy-stars {
+  display: none; /* Drifting stars removed for a clean professional look */
+}
+
+/* Background animated glow orbs following theme variables */
+body::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-color-1) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+  animation: floatGlow 15s infinite alternate ease-in-out;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-color-2) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+  animation: floatGlow 20s infinite alternate-reverse ease-in-out;
+}
+
+/* Mindful Breath Animations */
+.breath-circle {
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary-glow) 0%, rgba(255,255,255,0.01) 70%);
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 4s cubic-bezier(0.45, 0, 0.55, 1), box-shadow 4s cubic-bezier(0.45, 0, 0.55, 1), border-color 0.4s ease;
+}
+
+.breath-circle.inhale {
+  transform: scale(1.5);
+  box-shadow: 0 0 40px var(--primary-glow);
+}
+
+.breath-circle.hold {
+  transform: scale(1.5);
+  box-shadow: 0 0 40px var(--primary-glow);
+}
+
+.breath-circle.exhale {
+  transform: scale(0.95);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 30px) scale(1.15); }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.15);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Glassmorphism System */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border);
+  border-radius: 22px; /* 20-24px rounded corners */
+  box-shadow: var(--glass-shadow);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: gentleFloat 8s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.sidebar-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-right: 1px solid var(--border);
+  box-shadow: 4px 0 24px 0 rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 1023px) {
+  .sidebar-panel {
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar-panel {
+    border-radius: 0;
+  }
+}
+
+.glass-panel-hover:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.65),
+              0 0 25px var(--secondary-glow),
+              inset 0 0 25px rgba(255, 110, 199, 0.08);
+  transform: translateY(-4px) scale(1.015);
+}
+
+/* Neon Glow Outline Helpers */
+.neon-border-cyan {
+  border-color: #00D4FF !important;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.35), inset 0 0 10px rgba(0, 212, 255, 0.1) !important;
+}
+
+.neon-border-pink {
+  border-color: #FF6EC7 !important;
+  box-shadow: 0 0 15px rgba(255, 110, 199, 0.35), inset 0 0 10px rgba(255, 110, 199, 0.1) !important;
+}
+
+.progress-gradient {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%) !important;
+  box-shadow: 0 0 12px var(--primary-glow) !important;
+}
+
+.glass-input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.theme-solar .glass-input {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.glass-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.theme-solar .glass-input:focus {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.glass-button {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border: 1px solid var(--border);
+  border-radius: 20px; /* 20-24px rounded corners */
+  padding: 10px 20px;
+  color: #ffffff; /* always white text on galaxy gradient buttons */
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px var(--primary-glow);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button:hover:not(:disabled) {
+  opacity: 0.95;
+  box-shadow: 0 0 25px var(--primary-glow), 0 0 10px var(--secondary-glow);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.glass-button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.96); /* slight press scale-down effect */
+}
+
+.glass-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.glass-button-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: none;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.theme-solar .glass-button-secondary {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.glass-button-secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--border-hover);
+  color: var(--text);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  transform: translateY(-1.5px);
+}
+
+.glass-button-active {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-color: var(--border-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+
+.theme-solar .glass-button-active {
+  color: #ffffff;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text);
+  font-weight: 700; /* Realistic editorial bold headings */
+  letter-spacing: -0.01em; /* Elegant tight spacing for serifs */
+}
+
+/* Typography Bolding Utilities */
+.font-heading {
+  font-weight: 700 !important;
+}
+
+.font-bold-label {
+  font-weight: 700 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bold-value {
+  font-weight: 900 !important;
+}
+
+/* Utilities */
+.glowing-text {
+  text-shadow: 0 0 15px var(--primary-glow);
+}
+
+.glowing-border {
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cheer-emoji {
+  position: absolute;
+  font-size: 32px;
+  pointer-events: none;
+  animation: floatEmoji 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  z-index: 50;
+  bottom: 80px;
+  left: 50%;
+}
+
+@keyframes floatEmoji {
+  0% {
+    transform: translate(-50%, 0) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, -30px) scale(1.2) rotate(10deg);
+  }
+  100% {
+    transform: translate(calc(-50% + var(--drift-x, 40px)), -280px) scale(0.8) rotate(var(--rotation, -15deg));
+    opacity: 0;
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px var(--primary-glow); }
+  50% { box-shadow: 0 0 25px var(--primary-glow); }
+}
+
+/* Custom Animated Ring Cursor */
+.custom-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.25s ease;
+}
+
+@media (pointer: coarse) {
+  /* Disable custom cursor entirely on mobile touch viewports */
+  .custom-cursor-container {
+    display: none !important;
+  }
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.05s linear, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 6px var(--primary-glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.08s linear, width 0.25s cubic-bezier(0.25, 1, 0.5, 1), height 0.25s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover state styling over buttons/links */
+.custom-cursor-ring.hovering {
+  width: 50px;
+  height: 50px;
+  border-color: var(--primary);
+  background-color: var(--primary-glow);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+/* Clicking state styling */
+.custom-cursor-dot.clicking {
+  transform: scale(0.6);
+  background-color: var(--primary-hover);
+}
+
+.custom-cursor-ring.clicking {
+  width: 26px;
+  height: 26px;
+  border-color: var(--primary-hover);
+  background-color: var(--primary-glow);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* Hide standard system cursor only when custom cursor is active on hoverable desktop/pointer devices */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active a, 
+  body.custom-cursor-active button, 
+  body.custom-cursor-active input, 
+  body.custom-cursor-active select, 
+  body.custom-cursor-active textarea, 
+  body.custom-cursor-active [role="button"],
+  body.custom-cursor-active .glass-button,
+  body.custom-cursor-active .glass-panel-hover,
+  body.custom-cursor-active .sidebar-panel button {
+    cursor: none !important;
+  }
+}
+
+/* Cosmic Loader Animation */
+.cosmic-loader {
+  display: inline-block;
+  animation: spinCosmic 2s linear infinite;
+}
+
+@keyframes spinCosmic {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Cosmic Space Divider */
+.cosmic-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  opacity: 0.85;
+  margin: 1.25rem 0;
+}
+
+.cosmic-divider::before, .cosmic-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px dashed var(--border);
+}
+
+.cosmic-divider::before {
+  margin-right: 0.75rem;
+}
+
+.cosmic-divider::after {
+  margin-left: 0.75rem;
+}
+
+/* Cosmic Space Corner Decorations */
+.cosmic-corner {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.12;
+  z-index: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.theme-solar .cosmic-corner {
+  opacity: 0.16;
+}
+
+/* Accent element override for scrollbar track in light theme */
+.theme-solar ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Flashcards 3D Flip System */
+.flashcard-perspective {
+  perspective: 1000px;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flashcard-flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+  background: var(--bg-card-hover);
+}
+
+/* Light theme high-contrast readability overrides for hardcoded light text utility classes */
+.theme-solar .text-gray-100 { color: var(--text) !important; }
+.theme-solar .text-gray-200 { color: var(--text) !important; }
+.theme-solar .text-gray-300 { color: var(--text) !important; }
+.theme-solar .text-gray-400 { color: var(--text-muted) !important; }
+.theme-solar .text-gray-500 { color: var(--text-muted) !important; }
+.theme-solar .text-white:not(button):not(.glass-button):not(.glass-button-active) { color: var(--text) !important; }
+.theme-solar .text-slate-100 { color: var(--text) !important; }
+.theme-solar .text-slate-200 { color: var(--text) !important; }
+.theme-solar .text-slate-300 { color: var(--text) !important; }
+.theme-solar .text-slate-400 { color: var(--text-muted) !important; }
+.theme-solar .text-slate-500 { color: var(--text-muted) !important; }
